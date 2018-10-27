@@ -17,7 +17,6 @@ file_types_and_destinations = [
 
 def move_files(file_type,dst_path):
   beforefiles = [f for f in os.listdir(src_path) if os.path.isfile(os.path.join(src_path, f))]
-  # print(beforefiles)
   for t in file_type:
     t = '.' + str(t)
     files = filter(lambda x:x.endswith(t), beforefiles)
